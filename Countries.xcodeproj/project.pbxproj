@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AA2238CA219CBAF800485CFE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2238C9219CBAF800485CFE /* AppDelegate.swift */; };
-		AA2238CC219CBAF800485CFE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2238CB219CBAF800485CFE /* ViewController.swift */; };
+		AA2238CC219CBAF800485CFE /* CountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2238CB219CBAF800485CFE /* CountriesViewController.swift */; };
 		AA2238CF219CBAF800485CFE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2238CD219CBAF800485CFE /* Main.storyboard */; };
 		AA2238D1219CBB0000485CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA2238D0219CBB0000485CFE /* Assets.xcassets */; };
 		AA2238D4219CBB0000485CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2238D2219CBB0000485CFE /* LaunchScreen.storyboard */; };
@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		AA2238C6219CBAF800485CFE /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2238C9219CBAF800485CFE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA2238CB219CBAF800485CFE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AA2238CB219CBAF800485CFE /* CountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewController.swift; sourceTree = "<group>"; };
 		AA2238CE219CBAF800485CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA2238D0219CBB0000485CFE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AA2238D3219CBB0000485CFE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,12 +77,15 @@
 		AA2238C8219CBAF800485CFE /* Countries */ = {
 			isa = PBXGroup;
 			children = (
+				AA2238EC219CBDE600485CFE /* Service */,
 				AA2238C9219CBAF800485CFE /* AppDelegate.swift */,
-				AA2238CB219CBAF800485CFE /* ViewController.swift */,
 				AA2238CD219CBAF800485CFE /* Main.storyboard */,
 				AA2238D0219CBB0000485CFE /* Assets.xcassets */,
 				AA2238D2219CBB0000485CFE /* LaunchScreen.storyboard */,
 				AA2238D5219CBB0000485CFE /* Info.plist */,
+				AA2238EB219CBDDE00485CFE /* Model */,
+				AA2238EA219CBDD800485CFE /* View */,
+				AA2238E9219CBDCC00485CFE /* ViewModel */,
 			);
 			path = Countries;
 			sourceTree = "<group>";
@@ -94,6 +97,43 @@
 				AA2238E0219CBB0100485CFE /* Info.plist */,
 			);
 			path = CountriesTests;
+			sourceTree = "<group>";
+		};
+		AA2238E9219CBDCC00485CFE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AA2238EA219CBDD800485CFE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AA2238ED219CC07600485CFE /* ViewCell */,
+				AA2238CB219CBAF800485CFE /* CountriesViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA2238EB219CBDDE00485CFE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA2238EC219CBDE600485CFE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AA2238ED219CC07600485CFE /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,7 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA2238CC219CBAF800485CFE /* ViewController.swift in Sources */,
+				AA2238CC219CBAF800485CFE /* CountriesViewController.swift in Sources */,
 				AA2238CA219CBAF800485CFE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

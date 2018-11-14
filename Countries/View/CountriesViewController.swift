@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CountriesViewController.swift
 //  Countries
 //
 //  Created by Christian  Huang on 15/11/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CountriesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
