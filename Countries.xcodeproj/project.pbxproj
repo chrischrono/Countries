@@ -13,6 +13,7 @@
 		AA2238D1219CBB0000485CFE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA2238D0219CBB0000485CFE /* Assets.xcassets */; };
 		AA2238D4219CBB0000485CFE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2238D2219CBB0000485CFE /* LaunchScreen.storyboard */; };
 		AA2238DF219CBB0100485CFE /* CountriesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2238DE219CBB0100485CFE /* CountriesTests.swift */; };
+		AA3D4E28219F65C5002D2E88 /* CountryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3D4E27219F65C5002D2E88 /* CountryCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		AA2238DA219CBB0000485CFE /* CountriesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CountriesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA2238DE219CBB0100485CFE /* CountriesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesTests.swift; sourceTree = "<group>"; };
 		AA2238E0219CBB0100485CFE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA3D4E27219F65C5002D2E88 /* CountryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 		AA2238ED219CC07600485CFE /* ViewCell */ = {
 			isa = PBXGroup;
 			children = (
+				AA3D4E27219F65C5002D2E88 /* CountryCell.swift */,
 			);
 			path = ViewCell;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 			files = (
 				AA2238CC219CBAF800485CFE /* CountriesViewController.swift in Sources */,
 				AA2238CA219CBAF800485CFE /* AppDelegate.swift in Sources */,
+				AA3D4E28219F65C5002D2E88 /* CountryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
