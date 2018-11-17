@@ -1,0 +1,17 @@
+/* 
+  Localizable.strings
+  Countries
+
+  Created by Christian  Huang on 17/11/18.
+  Copyright © 2018 Christian Huang. All rights reserved.
+*/
+
+
+"network_loading" = "Loading...";
+"network_authentication_error" = "Invalid Email and Password.";
+"network_bad_request" = "Bad request";
+"network_outdated" = "The url you requested is outdated.";
+"network_failed" = "Network request failed.";
+"network_no_data" = "Response returned with no data to decode.";
+"network_unable_to_decode" = "We could not decode the response.";
+"network_no_response_object" = "No responseObject returned.";

@@ -18,15 +18,15 @@ class Country: Codable {
     var population: Int
     var latlng: [Double]
     var demonym: String
-    var area: Int
-    var gini: Float
+    var area: Double?
+    var gini: Float?
     var timezones: [String]
     var nativeName: String
-    var numericCode: String
+    var numericCode: String?
     var currencies: [Currency]
     var languages: [Language]
-    var translations: [String: String]
+    //var translations: [String: String]
     var flag: String
     var regionalBlocs: [RegionalBloc]
-    var cioc: String
+    var cioc: String?
 }

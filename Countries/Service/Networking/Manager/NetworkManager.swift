@@ -25,10 +25,10 @@ enum Result<String>{
 protocol CountriesNetworkManager {
     init(environment: NetworkEnvironment)
     /**
-     Fetched Countries data based on RESTCountries API
+     Fetch Countries data based on RESTCountries API
      - Parameter completion: block to handle the fetch results
      */
-    func getCountries(section: String, apiKey: String, completion: @escaping (_ countries: [Country]?,_ error: String?)->())
+    func fetchCountries(completion: @escaping (_ countries: [Country]?,_ error: String?)->())
 }
 
 class NetworkManager: CountriesNetworkManager {
@@ -41,11 +41,11 @@ class NetworkManager: CountriesNetworkManager {
     
     
     /**
-     Fetched Countries data based on RESTCountries API
+     Fetch Countries data based on RESTCountries API
      - Parameter completion: block to handle the fetch results
      */
-    func getCountries(section: String, apiKey: String, completion: @escaping (_ countries: [Country]?,_ error: String?)->()) {
-        router.request(.getCountries()) { data, response, error in
+    func fetchCountries(completion: @escaping (_ countries: [Country]?,_ error: String?)->()) {
+        router.request(.fetchCountries) { data, response, error in
             let result = self.handleNetworkResponse(data: data, response: response, error: error)
             switch result{
             case .success:

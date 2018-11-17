@@ -24,5 +24,10 @@ class CountryCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func configureCell(with countryCellViewModel: CountryCellViewModel) {
+        nameLabel.text = countryCellViewModel.name
+        regionLabel.text = countryCellViewModel.region
+    }
 
 }

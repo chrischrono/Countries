@@ -11,7 +11,7 @@ import Foundation
 
 class Language: Codable {
     var name: String
-    var iso639_1: String
-    var iso639_2: String
-    var nativeName: String
+    var iso639_1: String?
+    var iso639_2: String?
+    var nativeName: String?
 }

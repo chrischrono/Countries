@@ -96,12 +96,18 @@
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="TC1-ah-5Si"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="mpZ-1o-ifG">
+                                <rect key="frame" x="169" y="347" width="37" height="37"/>
+                                <color key="color" red="0.89777475595474243" green="0.15898552536964417" blue="0.14534163475036621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="mpZ-1o-ifG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="8fk-2j-sOQ"/>
                             <constraint firstItem="1AQ-ei-yFR" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="fyh-PY-dL8"/>
                             <constraint firstItem="1AQ-ei-yFR" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="gNF-JC-nbl"/>
                             <constraint firstItem="1AQ-ei-yFR" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" id="qsZ-b8-iB7"/>
+                            <constraint firstItem="mpZ-1o-ifG" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="u8p-Mf-VaJ"/>
                             <constraint firstItem="1AQ-ei-yFR" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="x7P-ae-rpu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -109,10 +115,12 @@
                     <navigationItem key="navigationItem" title="Countries" id="up2-bR-ciF"/>
                     <connections>
                         <outlet property="countriesTableView" destination="1AQ-ei-yFR" id="Q65-Vv-uzu"/>
+                        <outlet property="loadingView" destination="mpZ-1o-ifG" id="ycb-4t-O11"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="567" y="27"/>
         </scene>
     </scenes>
 </document>

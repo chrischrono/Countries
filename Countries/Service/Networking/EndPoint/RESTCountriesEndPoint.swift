@@ -8,7 +8,7 @@ import Foundation
 
 
 public enum RESTCountriesApi {
-    case getCountries()
+    case fetchCountries
 }
 
 extension RESTCountriesApi: EndPointType {
@@ -29,7 +29,7 @@ extension RESTCountriesApi: EndPointType {
     /** API path for specific request. */
     var path: String {
         switch self {
-        case .getCountries:
+        case .fetchCountries:
             return "rest/v2/all"
         }
     }
@@ -41,7 +41,7 @@ extension RESTCountriesApi: EndPointType {
     /** generate task based on requested RESTCountries API. */
     var task: HTTPTask {
         switch self {
-        case .getCountries:
+        case .fetchCountries:
             return .request
         }
     }
