@@ -52,8 +52,8 @@ class NetworkManager: CountriesNetworkManager {
                 do {
                     /*let jsonData = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers)
                     print(jsonData)*/
-                    let apiResponse = try JSONDecoder().decode(CountriesAPIResponse.self, from: data!)
-                    completion(apiResponse.countries, nil)
+                    let countries = try JSONDecoder().decode([Country].self, from: data!)
+                    completion(countries, nil)
                 }catch {
                     print(error)
                     completion(nil, NetworkResponse.unableToDecode.rawValue)
