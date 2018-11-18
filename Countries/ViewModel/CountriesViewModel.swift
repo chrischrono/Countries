@@ -10,16 +10,17 @@ import UIKit
 
 class CountriesViewModel: NSObject {
     private var countries = [Country]()
-    private var countryCellViewModels: [CountryCellViewModel] = [] {
+    private var countryCellViewModels: [CountryCellViewModel] = [] /*{
         didSet {
             reloadCountriesTableViewClosure?()
         }
-    }
+    }*/
     private var filteredCountryCellViewModels: [CountryCellViewModel] = [] {
         didSet {
             reloadCountriesTableViewClosure?()
         }
     }
+    private var keyword: String = ""
     
     /** hold the network manager for RESTCountries's API */
     var networkManager: CountriesNetworkManager = NetworkManager(environment: .production)
@@ -55,22 +56,32 @@ extension CountriesViewModel {
         }
     }
     
+    func filterCountries(keyword: String) {
+        if keyword == "" {
+            filteredCountryCellViewModels = countryCellViewModels
+        } else {
+            filteredCountryCellViewModels = countryCellViewModels.filter({ return $0.name.lowercased().range(of: keyword) != nil || $0.region.lowercased().range(of: keyword) != nil })
+        }
+        
+        self.keyword = keyword
+    }
     func getCountriesCount() -> Int {
-        return countryCellViewModels.count
+        return filteredCountryCellViewModels.count//countryCellViewModels.count
     }
     
     func getCountryCellViewModel(at indexPath: IndexPath) -> CountryCellViewModel {
-        return countryCellViewModels[indexPath.row]
+        return filteredCountryCellViewModels[indexPath.row]//countryCellViewModels[indexPath.row]
     }
     
     func userSelectedCountry(at indexPath: IndexPath) {
-        guard status == nil else {
+        guard status == nil && countryCellViewModels.count > 0 else {
             fetchCountries()
             return
         }
         
-        showCountryDetailClosure?(CountryDetailViewModel(with: countries[indexPath.row]))
-        print("userSelectedCountry: \(indexPath.row)")
+        let index: Int = filteredCountryCellViewModels[indexPath.row].index
+        showCountryDetailClosure?(CountryDetailViewModel(with: countries[index]))
+        print("userSelectedCountry: \(index)")
     }
 }
 
@@ -78,9 +89,15 @@ extension CountriesViewModel {
 extension CountriesViewModel {
     private func processCountries(_ countries: [Country]){
         self.countries = countries
-        self.countryCellViewModels = countries.map({ (country) -> CountryCellViewModel in
+        countryCellViewModels = countries.map({ (country) -> CountryCellViewModel in
             return CountryCellViewModel(with: country)
         })
+        var index = 0
+        for cellViewModel in countryCellViewModels {
+            cellViewModel.index = index
+            index += 1
+        }
+        filterCountries(keyword: keyword)
     }
     private func updateStatus(_ status: String) {
         self.status = status.localized()

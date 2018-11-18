@@ -32,7 +32,7 @@ class CountriesViewController: UIViewController {
     }
     
     @IBAction func searchFieldEditingChanged(_ sender: Any) {
-        
+        countriesViewModel.filterCountries(keyword: (searchField.text ?? "").lowercased())
     }
     
 }
@@ -75,9 +75,13 @@ extension CountriesViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let status = countriesViewModel.status {
+        if countriesViewModel.getCountriesCount() == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "statusCellIdentifier", for: indexPath)
-            cell.textLabel?.text = status
+            if let status = countriesViewModel.status {
+                cell.textLabel?.text = status
+            } else {
+                cell.textLabel?.text = "filter_no_result".localized()
+            }
             return cell
         }
         

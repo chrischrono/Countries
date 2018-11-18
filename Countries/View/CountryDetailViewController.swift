@@ -75,6 +75,9 @@ extension CountryDetailViewController {
 //MARK:- private func
 extension CountryDetailViewController {
     private func initViews() {
+        flagImageView.layer.borderWidth = 2
+        flagImageView.layer.borderColor = UIColor.darkGray.cgColor
+        
         let mainInfo: [CountryDetailInfo] = [.name, .capital, .alphaCode, .region, .subregion]
         for detailInfo in mainInfo.reversed() {
             let infoView = createInfoView(detailInfo)

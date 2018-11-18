@@ -9,6 +9,7 @@
 import UIKit
 
 class CountryCellViewModel: NSObject {
+    var index: Int!
     var thumbFlag: String
     var name: String
     var region: String

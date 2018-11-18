@@ -6,6 +6,7 @@
   Copyright © 2018 Christian Huang. All rights reserved.
 */
 
+"filter_no_result" = "No result!";
 
 "network_loading" = "Loading...";
 "network_authentication_error" = "Invalid Email and Password.";
