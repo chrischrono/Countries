@@ -14,6 +14,7 @@ class CountriesViewController: UIViewController {
     @IBOutlet private weak var loadingView: UIActivityIndicatorView!
     
     var countriesViewModel = CountriesViewModel()
+    private var scrollOffset = CGPoint.zero
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,6 +90,19 @@ extension CountriesViewController: UITableViewDataSource {
         cell.configureCell(with: countriesViewModel.getCountryCellViewModel(at: indexPath))
         
         return cell
+    }
+}
+
+//MARK:- UIScrollViewDelegate
+extension CountriesViewController {
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset
+        
+        if offset.y > scrollOffset.y + 10 {
+            searchField.resignFirstResponder()
+        }
+        
+        scrollOffset = offset
     }
 }
 

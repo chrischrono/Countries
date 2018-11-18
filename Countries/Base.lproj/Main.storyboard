@@ -44,6 +44,7 @@
                                         <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         <connections>
                                             <action selector="searchFieldEditingChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="YBC-6R-oaS"/>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="iLy-YK-yLq"/>
                                         </connections>
                                     </textField>
                                 </subviews>

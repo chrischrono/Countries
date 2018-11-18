@@ -60,7 +60,6 @@ extension CountriesViewModel {
         }
         
         self.keyword = keyword
-        print("filterResults: \(filteredCountryCellViewModels.count)")
     }
     func getCountriesCount() -> Int {
         return filteredCountryCellViewModels.count//countryCellViewModels.count
