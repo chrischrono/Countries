@@ -15,6 +15,11 @@ class CountriesViewModel: NSObject {
             reloadCountriesTableViewClosure?()
         }
     }
+    private var filteredCountryCellViewModels: [CountryCellViewModel] = [] {
+        didSet {
+            reloadCountriesTableViewClosure?()
+        }
+    }
     
     /** hold the network manager for RESTCountries's API */
     var networkManager: CountriesNetworkManager = NetworkManager(environment: .production)
@@ -24,6 +29,8 @@ class CountriesViewModel: NSObject {
     
     /** closure to reload CountriesTableView */
     var reloadCountriesTableViewClosure: (()->())?
+    /** closure to show CountryDetail */
+    var showCountryDetailClosure: ((CountryDetailViewModel)->())?
 }
 
 extension CountriesViewModel {
@@ -48,7 +55,6 @@ extension CountriesViewModel {
         }
     }
     
-    
     func getCountriesCount() -> Int {
         return countryCellViewModels.count
     }
@@ -63,6 +69,7 @@ extension CountriesViewModel {
             return
         }
         
+        showCountryDetailClosure?(CountryDetailViewModel(with: countries[indexPath.row]))
         print("userSelectedCountry: \(indexPath.row)")
     }
 }

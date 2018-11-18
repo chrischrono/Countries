@@ -32,6 +32,9 @@
 		AA3D4E3F219F765C002D2E88 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3D4E35219F765C002D2E88 /* HTTPTask.swift */; };
 		AA3D4E40219F765C002D2E88 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3D4E36219F765C002D2E88 /* NetworkLogger.swift */; };
 		AA3D4E41219F765C002D2E88 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA3D4E37219F765C002D2E88 /* Router.swift */; };
+		AA92D74E21A0B93E00CEFA32 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA92D74D21A0B93E00CEFA32 /* InfoView.swift */; };
+		AA92D75021A0B94F00CEFA32 /* InfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA92D74F21A0B94F00CEFA32 /* InfoView.xib */; };
+		AAD36C4921A1091700FAAB9E /* CountryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAD36C4821A1091700FAAB9E /* CountryDetailViewModel.swift */; };
 		AAF9995221A03718007CE34D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AAF9995421A03718007CE34D /* Localizable.strings */; };
 		AAF9995721A040F9007CE34D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF9995621A040F9007CE34D /* StringExtension.swift */; };
 		AAF9995921A05194007CE34D /* CountryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF9995821A05194007CE34D /* CountryDetailViewController.swift */; };
@@ -81,6 +84,9 @@
 		AA3D4E35219F765C002D2E88 /* HTTPTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 		AA3D4E36219F765C002D2E88 /* NetworkLogger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		AA3D4E37219F765C002D2E88 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		AA92D74D21A0B93E00CEFA32 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		AA92D74F21A0B94F00CEFA32 /* InfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoView.xib; sourceTree = "<group>"; };
+		AAD36C4821A1091700FAAB9E /* CountryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewModel.swift; sourceTree = "<group>"; };
 		AAF9995321A03718007CE34D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AAF9995621A040F9007CE34D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		AAF9995821A05194007CE34D /* CountryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailViewController.swift; sourceTree = "<group>"; };
@@ -171,6 +177,7 @@
 			children = (
 				AA1BC7AA21A01DCF00417396 /* CountriesViewModel.swift */,
 				AA1BC7AC21A0221400417396 /* CountryCellViewModel.swift */,
+				AAD36C4821A1091700FAAB9E /* CountryDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -178,6 +185,7 @@
 		AA2238EA219CBDD800485CFE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AA92D74C21A0B91700CEFA32 /* Custom */,
 				AA2238ED219CC07600485CFE /* ViewCell */,
 				AA2238CB219CBAF800485CFE /* CountriesViewController.swift */,
 				AAF9995821A05194007CE34D /* CountryDetailViewController.swift */,
@@ -260,6 +268,15 @@
 				AA3D4E37219F765C002D2E88 /* Router.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		AA92D74C21A0B91700CEFA32 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				AA92D74D21A0B93E00CEFA32 /* InfoView.swift */,
+				AA92D74F21A0B94F00CEFA32 /* InfoView.xib */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 		AAF9995521A040C8007CE34D /* Extension */ = {
@@ -368,6 +385,7 @@
 			files = (
 				AA2238D4219CBB0000485CFE /* LaunchScreen.storyboard in Resources */,
 				AAF9995221A03718007CE34D /* Localizable.strings in Resources */,
+				AA92D75021A0B94F00CEFA32 /* InfoView.xib in Resources */,
 				AA2238D1219CBB0000485CFE /* Assets.xcassets in Resources */,
 				AA2238CF219CBAF800485CFE /* Main.storyboard in Resources */,
 			);
@@ -491,6 +509,7 @@
 			files = (
 				AA3D4E40219F765C002D2E88 /* NetworkLogger.swift in Sources */,
 				AA1BC7AD21A0221400417396 /* CountryCellViewModel.swift in Sources */,
+				AAD36C4921A1091700FAAB9E /* CountryDetailViewModel.swift in Sources */,
 				AA3D4E3B219F765C002D2E88 /* RESTCountriesEndPoint.swift in Sources */,
 				AA3D4E38219F765C002D2E88 /* JSONParameterEncoder.swift in Sources */,
 				AA1BC7A121A00C2B00417396 /* Dynamic.swift in Sources */,
@@ -504,6 +523,7 @@
 				AA2238CA219CBAF800485CFE /* AppDelegate.swift in Sources */,
 				AA3D4E3F219F765C002D2E88 /* HTTPTask.swift in Sources */,
 				AAF9995921A05194007CE34D /* CountryDetailViewController.swift in Sources */,
+				AA92D74E21A0B93E00CEFA32 /* InfoView.swift in Sources */,
 				AA3D4E3A219F765C002D2E88 /* URLParameterEncoding.swift in Sources */,
 				AA1BC7AB21A01DCF00417396 /* CountriesViewModel.swift in Sources */,
 				AA3D4E3E219F765C002D2E88 /* HTTPMethod.swift in Sources */,
@@ -684,7 +704,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X5UG5NGMS;
 				INFOPLIST_FILE = Countries/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.Countries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -700,7 +723,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X5UG5NGMS;
 				INFOPLIST_FILE = Countries/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.Countries;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -717,7 +743,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X5UG5NGMS;
 				INFOPLIST_FILE = CountriesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.CountriesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -735,7 +765,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7X5UG5NGMS;
 				INFOPLIST_FILE = CountriesTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.inovidea.CountriesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

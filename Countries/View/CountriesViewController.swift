@@ -9,6 +9,7 @@
 import UIKit
 
 class CountriesViewController: UIViewController {
+    @IBOutlet private weak var searchField: UITextField!
     @IBOutlet private weak var countriesTableView: UITableView!
     @IBOutlet private weak var loadingView: UIActivityIndicatorView!
     
@@ -23,7 +24,17 @@ class CountriesViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         countriesViewModel.fetchCountries()
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CountryDetailViewController, let viewModel = sender as? CountryDetailViewModel {
+            destination.countryDetailViewModel = viewModel
+        }
+    }
+    
+    @IBAction func searchFieldEditingChanged(_ sender: Any) {
+        
+    }
+    
 }
 
 //MARK:- ViewModel related
@@ -44,15 +55,20 @@ extension CountriesViewController {
                 
             }
         }
+        countriesViewModel.showCountryDetailClosure = { viewModel in
+            self.performSegue(withIdentifier: "countryDetailSegue", sender: viewModel)
+        }
     }
 }
 
+//MARK:- UITableViewDelegate
 extension CountriesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         countriesViewModel.userSelectedCountry(at: indexPath)
     }
 }
 
+//MARK:- UITableViewDataSource
 extension CountriesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return max(1, countriesViewModel.getCountriesCount())
@@ -69,6 +85,14 @@ extension CountriesViewController: UITableViewDataSource {
         cell.configureCell(with: countriesViewModel.getCountryCellViewModel(at: indexPath))
         
         return cell
+    }
+}
+
+//MARK:- UITextFieldDelegate
+extension CountriesViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
 

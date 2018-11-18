@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class CountryCell: UITableViewCell {
     
@@ -28,6 +29,7 @@ class CountryCell: UITableViewCell {
     func configureCell(with countryCellViewModel: CountryCellViewModel) {
         nameLabel.text = countryCellViewModel.name
         regionLabel.text = countryCellViewModel.region
+        flagImageView.kf.setImage(with: URL(string: countryCellViewModel.thumbFlag))
     }
 
 }

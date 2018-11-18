@@ -14,7 +14,7 @@ class CountryCellViewModel: NSObject {
     var region: String
     
     init(with country: Country){
-        thumbFlag = country.alpha2Code
+        thumbFlag = "https://raw.githubusercontent.com/hjnilsson/country-flags/master/png100px/\(country.alpha2Code.lowercased()).png"
         name = country.name
         region = country.subregion
     }
