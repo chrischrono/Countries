@@ -14,6 +14,12 @@ class Currency: Codable {
     var name: String?
     var symbol: String?
     
+    /**
+     Convert currency data String
+     - return String?:
+            nil -> if all the currency data is nil
+            "<name/code> - <symbol>" -> expected result
+     */
     func toString() -> String? {
         var result = ""
         

@@ -10,12 +10,8 @@ import UIKit
 
 class CountriesViewModel: NSObject {
     private var countries = [Country]()
-    private var countryCellViewModels: [CountryCellViewModel] = [] /*{
-        didSet {
-            reloadCountriesTableViewClosure?()
-        }
-    }*/
-    private var filteredCountryCellViewModels: [CountryCellViewModel] = [] {
+    var countryCellViewModels: [CountryCellViewModel] = []
+    var filteredCountryCellViewModels: [CountryCellViewModel] = [] {
         didSet {
             reloadCountriesTableViewClosure?()
         }
@@ -64,6 +60,7 @@ extension CountriesViewModel {
         }
         
         self.keyword = keyword
+        print("filterResults: \(filteredCountryCellViewModels.count)")
     }
     func getCountriesCount() -> Int {
         return filteredCountryCellViewModels.count//countryCellViewModels.count
