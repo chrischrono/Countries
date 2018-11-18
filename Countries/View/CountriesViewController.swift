@@ -97,7 +97,6 @@ extension CountriesViewController: UITableViewDataSource {
 extension CountriesViewController {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let offset = scrollView.contentOffset
-        
         if offset.y > scrollOffset.y + 10 {
             searchField.resignFirstResponder()
         }
