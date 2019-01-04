@@ -11,20 +11,20 @@ import MapKit
 
 class CountryDetailViewModel: NSObject {
     private var country: Country!
-    var flag: Dynamic<String> = Dynamic("")
-    var name: Dynamic<String> = Dynamic("")
-    var alphaCode: Dynamic<[String]> = Dynamic([])
-    var capital: Dynamic<String> = Dynamic("")
-    var region: Dynamic<String> = Dynamic("")
-    var subregion: Dynamic<String> = Dynamic("")
-    var population: Dynamic<Int> = Dynamic(0)
-    var coordinate: Dynamic<CLLocationCoordinate2D> = Dynamic(CLLocationCoordinate2D(latitude: 0, longitude: 0))
-    var demonym: Dynamic<String> = Dynamic("")
-    var area: Dynamic<Double?> = Dynamic(0)
-    var gini: Dynamic<Float?> = Dynamic(0)
-    var nativeName: Dynamic<String> = Dynamic("")
-    var currencies: Dynamic<[String]> = Dynamic([])
-    var languages: Dynamic<[String]> = Dynamic([])
+    let flag: Dynamic<String> = Dynamic("")
+    let name: Dynamic<String> = Dynamic("")
+    let alphaCode: Dynamic<[String]> = Dynamic([])
+    let capital: Dynamic<String> = Dynamic("")
+    let region: Dynamic<String> = Dynamic("")
+    let subregion: Dynamic<String> = Dynamic("")
+    let population: Dynamic<Int> = Dynamic(0)
+    let coordinate: Dynamic<CLLocationCoordinate2D> = Dynamic(CLLocationCoordinate2D(latitude: 0, longitude: 0))
+    let demonym: Dynamic<String> = Dynamic("")
+    let area: Dynamic<Double?> = Dynamic(0)
+    let gini: Dynamic<Float?> = Dynamic(0)
+    let nativeName: Dynamic<String> = Dynamic("")
+    let currencies: Dynamic<[String]> = Dynamic([])
+    let languages: Dynamic<[String]> = Dynamic([])
     
     
     init(with country: Country){
